@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 3px 12px;
+  /* background-color: coral; */
+  margin: 0 5px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+ul li a::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 15px;
+  bottom: 7px;
+  border: 4px solid rgba(211, 12, 111, 1);
+  border-width: 0 0 2px 2px;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+ul li a::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  border: 4px solid rgba(211, 12, 111, 1);
+  border-width: 2px 2px 0 0;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+ul li a:hover::before {
+  left: -5px;
+  bottom: -5px;
+  opacity: 1;
+}
+
+ul li a:hover::after {
+  top: -5px;
+  right: -5px;
+  opacity: 1;
+}
+
+ul li a:hover {
+  background-color: rgba(211, 12, 111, 1);
+  color: #fff;
+}
